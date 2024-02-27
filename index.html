@@ -1,0 +1,323 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Professional Company Website</title>
+<style>
+    @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600&display=swap');
+
+    *
+    {
+        margin:0;
+        padding:0;
+        box-sizing: border-box;
+        cursor: default;
+    }
+    
+    body{
+        font-family: 'Poppins', sans-serif;
+    }
+
+    html{
+        scroll-behavior: smooth;
+    }
+    
+    p{
+        color: rgb(85 ,85, 85);
+    }
+
+    /* Transition*/
+    a,.btn{
+        transition: all 500ms ease; 
+    }
+
+    /*Desktop Navigation*/
+
+    nav, 
+    .nav-links{
+        display: flex ;
+        justify-content: space-around;
+    }
+
+    nav{ 
+        justify-content: space-around;
+        align-items: center;
+        height: 50px;
+        width: 90%;
+        max-width: 800px;
+        background-color: rgba(255, 255, 255, 0.9);
+        position: relative;
+        z-index: 2;
+        border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+        margin: 0 auto;
+    }
+
+    .nav-links{
+        list-style: none;
+        font-size: 1rem ;
+    }
+
+    a{
+        color: black;
+        text-decoration: none;
+        text-decoration-color: white;
+    }
+
+    a:hover{
+        color: gray;
+        text-decoration: underline;
+        text-underline-offset: 0.25rem;
+        text-decoration-color: rgb(181 ,181, 181);
+    }
+
+    /*Sections*/
+
+    section{
+        padding-top: 2cm;
+        margin: 1cm auto;
+        box-sizing: border-box;
+        min-height: fit-content;
+        text-align: center;
+        width: 80%;
+        max-width: 800px;
+    }
+
+    .section-container{
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: center;
+        gap: 1cm;
+    }
+
+    /* About Section */
+
+    #about {
+        position: relative;
+    }
+
+    .about-details-container {
+        flex: 1 1 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        margin: 2rem 0;
+    }
+
+    .title-container{
+        display: block;
+        text-align: center;
+        justify-content: center;
+        max-width: 500px;
+
+    }
+
+    .details-container {
+        padding: 1.5rem;
+        background: white;
+        border-radius: 2rem;
+        border: rgb(53, 53, 53) 0.1rem solid;
+        border-color: rgb(163, 163, 163);
+        text-align: center;
+        max-width: 500px;
+    }
+
+    /* Services, Testimonials, Team Sections */
+
+    .services-container,
+    .testimonials-container,
+    .team-container {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+    }
+
+    .service-box,
+    .testimonial-box,
+    .team-member {
+        flex: 1 1 300px;
+        padding: 2rem;
+        background-color: white;
+        border-radius: 2rem;
+        border: rgb(53, 53, 53) 0.1rem solid;
+        border-color: rgb(163, 163, 163);
+        text-align: left;
+    }
+
+    .service-box ul,
+    .testimonial-box ul {
+        padding-left: 2rem;
+    }
+
+    /* Footer Section */
+
+    footer {
+        padding-top: 3cm;
+        height: 26vh;
+        margin: 0 auto;
+        width: 80%;
+        max-width: 800px;
+    }
+
+    footer p {
+        text-align: center;
+    }
+
+    /* Bottom Navigation */
+
+    .bottom-nav {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        background-color: rgba(255, 255, 255, 0.9);
+        height: 50px;
+        border-top: 1px solid rgba(0, 0, 0, 0.1);
+        position: relative;
+        z-index: 2;
+        width: 90%;
+        max-width: 800px;
+        margin: 0 auto;
+    }
+
+    .bottom-nav .nav-links {
+        list-style: none;
+        font-size: 1rem;
+        display: flex;
+        gap: 1rem;
+    }
+
+    /* Animated Rounded Squares */
+
+    .animated-square {
+        position: fixed;
+        width: 50px;
+        height: 50px;
+        background-color: rgba(0, 0, 0, 0.5);
+        border-radius: 10px;
+        opacity: 0.3;
+        z-index: -1;
+        animation: float 5s infinite alternate;
+    }
+
+    @keyframes float {
+        0% {
+            transform: translateY(0) translateX(0);
+        }
+        50% {
+            transform: translateY(-20px) translateX(20px);
+        }
+        100% {
+            transform: translateY(-40px) translateX(-40px);
+        }
+    }
+
+    /* Contact Section */
+
+    #contact {
+        margin: 1cm auto;
+        width: 80%;
+        max-width: 800px;
+        text-align: center;
+    }
+
+    .contact-options {
+        display: flex;
+        justify-content: center;
+        gap: 1rem;
+        margin-top: 1rem;
+    }
+
+    .contact-link {
+        padding: 0.5rem 1rem;
+        border-radius: 2rem;
+        background-color: white;
+        color: black;
+        text-decoration: none;
+        transition: background-color 0.3s ease;
+        border: 1px solid #007bff;
+    }
+
+    .contact-link:hover {
+        background-color: #007bff;
+        color: white;
+    }
+
+</style>
+</head>
+<body>
+
+<div class="animated-square" style="left: 20px; top: 20px;"></div>
+<div class="animated-square" style="right: 20px; bottom: 20px;"></div>
+
+<nav>
+    <ul class="nav-links">
+        <li><a href="#about">About</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#testimonials">Testimonials</a></li>
+        <li><a href="#contact">Contact</a></li>
+    </ul>
+</nav>
+<section class="title-container">
+    <h1>Mano Studio</h1>
+    <p>214,Master Colony, 
+        Achipatti, 
+        Pollachi-642002</p>
+</section>
+
+<section id="about">
+    <h1>About Our Company</h1>
+    <div class="section-container">
+        <div class="about-details-container">
+            <div class="details-container">
+                <h2 class="section-title">About Us</h2>
+                <p class="section-description">Providing quality and satisfactory content for over 13 years, never had a disappointed customer for all these years. Giving importance to Quality over Quantity...</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="services">
+    <div class="section-container">
+        <div class="service-box">
+            <h2 class="service-title">Services</h2>
+            <ul class="service-description">
+                <li>Album-Designing and Making</li>
+                <li>Photographer and Videographer</li>
+                <li>Photo and Video Editor</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="testimonials">
+    <div class="section-container">
+        <div class="testimonial-box">
+            <h2 class="testimonial-title">Testimonials</h2>
+            <ul class="testimonial-description">
+                <li>Better Cost-to-work Ratio</li>
+                <li>Better Costomer Satisfaction</li>
+                <li>Quality work Assured</li>
+            </ul>
+        </div>
+    </div>
+</section>
+
+<section id="contact">
+    <h2>Contact Us</h2>
+    <div class="contact-options">
+        <a href="manodesigning@gmail.com" class="contact-link">Mail Us</a>
+        <a class="contact-link">Mobile: +91 8973277328</a>
+    </div>
+</section>
+
+<div class="bottom-nav">
+    <ul class="nav-links">
+        <li><a href="#about">About    </a></li>
+        <li><a href="#services">Services    </a></li>
+        <li><a href="#testimonials">Testimonials    </a></li>
+        <li><a href="#contact">Contact    </a></li>
+    </ul>
+</div>
+
+</body>
+</html>
